@@ -1,0 +1,14 @@
+body {
+  background-image: linear-gradient(to right top, #d91b23, #124feb);
+  min-height: 100vh;
+  background-repeat: no-repeat;
+}
+
+/* designing card a bit  */
+
+.card {
+  border-radius: 10px;
+}
+.card:hover {
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
