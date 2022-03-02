@@ -1,3 +1,5 @@
+/* global style  */
+
 body {
   background-image: linear-gradient(to right top, #d91b23, #124feb);
   min-height: 100vh;

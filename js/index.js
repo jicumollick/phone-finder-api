@@ -1,5 +1,4 @@
 
-
 // searching the phone from api 
 const searchPhone = () => {
     const input = document.getElementById('input');
@@ -12,15 +11,11 @@ const searchPhone = () => {
     fetch(url)
         .then(res => res.json())
         .then(data => displayPhones(data.data));
-
 }
 
 const displayPhones = (phones) => {
 
     console.log(phones);
-
-  
-
     const parent = document.getElementById('phones-container');
 
 // cleaning old phone searched 
@@ -35,7 +30,6 @@ document.getElementById('phoneDetails').innerHTML = '';
     }else {
         document.getElementById('error').classList.add('d-none');
     }
-
 
     for (let phone of phones.slice(0,20)) {
         const div = document.createElement('div');
@@ -66,7 +60,6 @@ const getDetails = (id) => {
     fetch(url)
         .then(res => res.json())
         .then(data => showDetails(data.data));
-
 }
 
 const showDetails = (singlePhone) => {  
@@ -75,7 +68,6 @@ const showDetails = (singlePhone) => {
 
     // error handling for single phone details 
     if( singlePhone.hasOwnProperty('others')){
-      
         document.getElementById('error2').classList.add('d-none');
     }else {
         document.getElementById('error2').classList.remove('d-none');
@@ -109,10 +101,8 @@ const showDetails = (singlePhone) => {
     <h5>Chipset: ${singlePhone.mainFeatures.chipSet}</h5>
     <h5>Storage: ${singlePhone.mainFeatures.storage}</h5>
     <h5>Sensors: ${singlePhone.mainFeatures.sensors}</h5>
-  
     <h5>Others: ${Bluetooth,GPS,NFC, Radio, USB, WLAN}</h5>
 </div>
     `;
     parent.appendChild(div);
-
 }
